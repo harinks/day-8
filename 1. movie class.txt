@@ -1,0 +1,21 @@
+1. create movie class
+
+function Movie(Title, Studio, Rating) {
+        this.title = Title || "unknown";
+        this.studio = Studio || "unknown";
+        this.rating = Rating || "PG"||"R";
+        this.getmoviedetails = function () {
+            return this.title + " - " + this.studio + "," + this.rating;
+        }
+}
+
+var movie1 = new Movie("Casino Royale","Eon Production","PG13");
+console.log(movie1.getmoviedetails());
+
+var movie2 = new Movie("Avergers:endgame","Marvel Studios","");
+console.log(movie2.getmoviedetails());
+
+Output:
+
+Casino Royale - Eon Production,PG13
+Avergers:endgame - Marvel Studios,PG

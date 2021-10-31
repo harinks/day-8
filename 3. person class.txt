@@ -1,0 +1,17 @@
+3. Write a “person” class to hold all the details.
+
+function Person(FirstName, LastName, Age, Email) {
+        this.firstName = FirstName || "unknown";
+        this.lastName = LastName || "unknown";
+        this.age = Age || 25;
+        this.email = Email || "unknown";
+        this.getFullName = function () {
+            return this.firstName + " " + this.lastName +" "+ this.age + " "+ this.email;
+        }
+}
+
+var person1 = new Person("James","Bond",50,"jamesbond@gmail.com");
+console.log(person1.getFullName());
+
+var person2 = new Person("Tom","Paul","","tompaul@gmail.com");
+console.log(person2.getFullName());

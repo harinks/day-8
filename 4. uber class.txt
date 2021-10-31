@@ -1,0 +1,53 @@
+4.write a class to calculate uber price.
+
+
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+  //start-here
+  //Your code goes here … replace the below line with your code logic 
+var data1 = userInput[0].split(" ");
+var data2 = userInput[1].split(" ");
+
+function Uber() {
+            this.base = 30;
+            this.costperminute = 1;
+            this.distancetime = "unknown"
+            this.costpermile = 7;
+            this.ridedistance = "unknown";
+            this.bookingfee = 20
+            this.totalFare = function(){
+                return this.base + (this.costperminute*this.distancetime)+(this.costpermile*this.ridedistance)+this.bookingfee;
+            }
+        }
+
+var uber1 = new Uber();
+uber1.ridedistance = parseInt(data1[0]);
+uber1.distancetime = parseInt(data1[1]);
+console.log("Passenger 1- "+"Rs."+uber1.totalFare())
+
+var uber2 = new Uber();
+uber2.ridedistance = parseInt(data2[0]);
+uber2.distancetime = parseInt(data2[1]);
+console.log("Passenger 2- "+"Rs."+uber2.totalFare());
+     
+
+
+  //end-here
+});
+
+
+Output:
+Passenger 1- Rs.150
+passenger 2- Rs.95
